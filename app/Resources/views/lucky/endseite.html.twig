@@ -1,0 +1,18 @@
+
+{# app/Resources/views/lucky/endseite.html.twig #}
+<center>
+<h2 style="font-size: 40px">{{ response }}</h2>
+<h3>
+Deine Zahlen: <br>
+    {% for i in 1..anzahl %}
+        {{ i }}: {{ zahlen[i]['eingabe'] }}<br>
+    {% endfor %}
+Die richtigen Zahlen: <br>
+    {% for i in 1..anzahl %}
+        {{ i }}: {{ zahlen[i]['richtig'] }} <br>
+    {% endfor %}
+ <br>
+    Du hast die Superzahl {{ superzahl['eingabe']}}, richtig ist die Zahl {{ superzahl['richtig'] }}.
+</h3>
+<h1>Du hast {{ percent }} richtig!</h1>
+</center>

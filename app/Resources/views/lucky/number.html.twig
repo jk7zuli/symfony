@@ -1,0 +1,16 @@
+{# app/Resources/views/lucky/number.html.twig #}
+{#<form action="../../../../src/AppBundle/Controller/validate.php" method="post">#}
+<center>
+<form action="/src/AppBundle/Controller/validate.php" method="post">
+    {% for i in 1..anzahl %}
+        {{ i }}. Zahl:  <input type="number" name="Zahl{{ i }}" max="49" min="1"><br> <br>
+    {% endfor %}
+    {% if superzahl == true %}
+        Superzahl :<input type="number" name="superzahl_value" max="49" min="1"><br> <br>
+    {% endif %}
+    <input type="hidden" name="anzahl" value="{{ anzahl }}">
+    <input type="hidden" name="superzahl" value="{{ superzahl }}">
+    <input type="submit" value="Versuche dein Glück!">
+</form>
+</center>
+
