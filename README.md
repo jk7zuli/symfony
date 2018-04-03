@@ -1,3 +1,3 @@
-proj
+Lotery
 ====
-just a small lottery web aplication
+It's just a small lottery web aplication written in Symfony.
